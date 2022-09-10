@@ -1,68 +1,65 @@
 package ru.yandex.practikum.pageObject;
-
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class OrderPage extends ru.yandex.practikum.pageObject.BasePage {
-    public OrderPage(WebDriver driver){
+    private final String name;
+    private final String surname;
+    private final String address;
+    private final String stationMetro;
+    private final String phoneNumber;
+    public OrderPage(WebDriver driver, String name, String surname, String address, String stationMetro, String phoneNumber){
         super(driver);
+        this.name = name;
+        this.surname = surname;
+        this.address = address;
+        this.stationMetro = stationMetro;
+        this.phoneNumber = phoneNumber;
     }
-    private By nameCustomerField = By.xpath("//input[@placeholder='* Имя']");
-    private By surnameCustomerField = By.xpath("//input[@placeholder='* Фамилия']");
-    private By addressCustomerField = By.xpath("//input[@placeholder='* Адрес: куда привезти заказ']");
-    private By stationMetroList = By.xpath("//input[@placeholder='* Станция метро']");
-    private By selectMetroStationSokolniki = By.xpath("//div[@class='select-search__select']//*[text()='Сокольники']");
-    private By selectMetroStationCherkiz = By.xpath("//div[@class='select-search__select']//*[text()='Черкизовская']");
-    private By phoneNumberField = By.xpath("//input[@placeholder='* Телефон: на него позвонит курьер']");
-    private By buttonNext = By.xpath("//*[@class='Button_Button__ra12g Button_Middle__1CSJM']");
-    public void checkLoadPage() {
-        driver.findElement(nameCustomerField).isDisplayed();
+    //локатор поля для ввода имени заказчика
+    private final By nameCustomerField = By.xpath("//input[@placeholder='* Имя']");
+    //локатор поля для ввода фамилии заказчика
+    private final By surnameCustomerField = By.xpath("//input[@placeholder='* Фамилия']");
+    //локатор поля для ввода адреса
+    private final By addressCustomerField = By.xpath("//input[@placeholder='* Адрес: куда привезти заказ']");
+    //локатор поля для ввода номера телефона заказчика
+    private final By phoneNumberField = By.xpath("//input[@placeholder='* Телефон: на него позвонит курьер']");
+    //локатор кнопки далее
+    private final By buttonNext = By.xpath("//*[@class='Button_Button__ra12g Button_Middle__1CSJM']");
+    //
+    public void customerInformationFields(Object[][] dataCustomer) {
+        inputName(name);
+        inputSurname(surname);
+        inputAddress(address);
+        inputStationMetro(stationMetro);
+        inputPhoneNumber(phoneNumber);
     }
-
-    public void clickOnTheStationMenu() {
-        driver.findElement(stationMetroList).click();
+    //метод выбора метро в списке
+    public void inputStationMetro(String stationMetro) {
+        driver.findElement(By.xpath("//*[@placeholder= '* Станция метро']")).click();
+        driver.findElement(By.xpath("//*[@placeholder= '* Станция метро']")).sendKeys(stationMetro);
+        driver.findElement(By.xpath("//div[@class='select-search__select']//*[text()='"+stationMetro+"']")).click();
     }
-    public void inputStationMetroSokolniki() {
-        driver.findElement(selectMetroStationSokolniki).click();
-    }
-    public void inputStationMetroLubanka() {
-        driver.findElement(selectMetroStationCherkiz).click();
-    }
+    //метод для поля телефон
     public void inputPhoneNumber(String inputPhoneNumber) {
         driver.findElement(phoneNumberField).sendKeys(inputPhoneNumber);
     }
+    //метод для кнопки далее
     public void clickOnTheButtonNext() {
         driver.findElement(buttonNext).click();
     }
-
-    public void inputNameAlex() {
-        driver.findElement(nameCustomerField).sendKeys("Александр");
+    //метод для ввода имени
+    public void inputName(String name) {
+        driver.findElement(nameCustomerField).sendKeys(name);
+    }
+    //метод для ввода фамилии
+    public void inputSurname(String surname) {
+        driver.findElement(surnameCustomerField).sendKeys(surname);
+    }
+    //метод для ввода адреса
+    public void inputAddress(String address) {
+        driver.findElement(addressCustomerField).sendKeys(address);
     }
 
-    public void inputNamePetya() {
-        driver.findElement(nameCustomerField).sendKeys("Петя");
-    }
 
-    public void inputSurnamePetrov() {
-        driver.findElement(surnameCustomerField).sendKeys("Петров");
-    }
-
-    public void inputSurnameSidorov() {
-        driver.findElement(surnameCustomerField).sendKeys("Сидоров");
-    }
-
-    public void inputAddressCustomerMoscow() {
-        driver.findElement(addressCustomerField).sendKeys("г.Москва");
-    }
-    public void inputAddressCustomerSamara() {
-        driver.findElement(addressCustomerField).sendKeys("г.Самара");
-    }
-
-    public void inputPhoneNumber1() {
-        driver.findElement(phoneNumberField).sendKeys("99999999999");
-    }
-    public void inputPhoneNumber2() {
-        driver.findElement(phoneNumberField).sendKeys("88888888888");
-    }
 }
