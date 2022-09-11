@@ -27,6 +27,7 @@ public class MainPage extends BasePage {
 
     //метод для теста клика по пунктам меню
     public WebElement clickOnTheMenuItem(int numberItem){
+        numberItem = numberItem - 1;
         List<WebElement> elementList = driver.findElements(By.className("accordion__button"));
         WebElement element = elementList.get(numberItem);
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", element);
@@ -34,6 +35,7 @@ public class MainPage extends BasePage {
     }
     //метод для проверки открылось ли меню
     public String getCheckTextFromDropdownField(int numberItem){
+        numberItem = numberItem - 1;
         List<WebElement> elementList = driver.findElements(By.className("accordion__panel"));
         wait.until(ExpectedConditions.visibilityOf(elementList.get(numberItem)));
         return elementList.get(numberItem).getText();

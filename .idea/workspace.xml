@@ -4,14 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2ccc4540-782d-4dde-a0fc-59b083b6d741" name="Changes" comment="тест на заказ с параметризацией, в хроме не работает кнопка заказать на последней форме заказа">
+    <list default="true" id="2ccc4540-782d-4dde-a0fc-59b083b6d741" name="Changes" comment="вроде все поправил, сделал как мог">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/yandex/practikum/pageObject/AboutRent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/yandex/practikum/pageObject/AboutRent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/yandex/practikum/pageObject/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/yandex/practikum/pageObject/BasePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/yandex/practikum/pageObject/MainPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/yandex/practikum/pageObject/MainPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/yandex/practikum/pageObject/OrderPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/yandex/practikum/pageObject/OrderPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ru/yandex/practikum/pageObjectTests/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/yandex/practikum/pageObjectTests/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ru/yandex/practikum/pageObjectTests/MakeOrderTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/yandex/practikum/pageObjectTests/MakeOrderTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/yandex/practikum/pageObjectTests/DropDownMenuQuestionsAboutImportantTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/yandex/practikum/pageObjectTests/DropDownMenuQuestionsAboutImportantTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +54,7 @@
       <command value="mvn verify" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.All in Sprint_4">
+  <component name="RunManager" selected="JUnit.DropDownMenuQuestionsAboutImportantTests">
     <configuration name="All in Sprint_4" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Sprint_4" />
       <option name="PACKAGE_NAME" value="" />
@@ -131,11 +127,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.DropDownMenuQuestionsAboutImportantTests" />
         <item itemvalue="JUnit.All in Sprint_4" />
         <item itemvalue="JUnit.MakeOrderTests.placeOrderUsingButtonBelow" />
         <item itemvalue="JUnit.MakeOrderTests.placeOrderUsingButtonOnTheTop1" />
         <item itemvalue="JUnit.MakeOrderTests" />
-        <item itemvalue="JUnit.DropDownMenuQuestionsAboutImportantTests" />
       </list>
     </recent_temporary>
   </component>
@@ -169,7 +165,14 @@
       <option name="project" value="LOCAL" />
       <updated>1662850598743</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="вроде все поправил, сделал как мог">
+      <created>1662881314451</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1662881314451</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -187,6 +190,7 @@
     <MESSAGE value="first_commit_in_develop" />
     <MESSAGE value="another attempt" />
     <MESSAGE value="тест на заказ с параметризацией, в хроме не работает кнопка заказать на последней форме заказа" />
-    <option name="LAST_COMMIT_MESSAGE" value="тест на заказ с параметризацией, в хроме не работает кнопка заказать на последней форме заказа" />
+    <MESSAGE value="вроде все поправил, сделал как мог" />
+    <option name="LAST_COMMIT_MESSAGE" value="вроде все поправил, сделал как мог" />
   </component>
 </project>
