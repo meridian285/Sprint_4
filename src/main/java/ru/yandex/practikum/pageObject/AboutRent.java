@@ -22,30 +22,35 @@ public class AboutRent extends BasePage {
     //локатор подтверждения заказа
     private final By buttonYes = By.xpath("//button[text()='Да']");
     //локатор проверки принят ли заказ
-    private final By locatorForAssert = By.xpath("//div[@class='Order_ModalHeader__3FDaJ']");
+    private final By locatorForAssert = By.xpath("//div[@class='Order_ModalHeader__3FDaJ'][text()='Заказ оформлен']");
+    //выбираем дату доставки
     public void selectDataDelivery() {
         driver.findElement(dateField).click();
         driver.findElement(selectDateDelivery).click();
     }
+    //выбираем период аренды
     public void selectPeriodRent() {
         driver.findElement(rentPeriodField).click();
         driver.findElement(selectPeriodDay).click();
     }
+    //выбираем черный самокат
     public void clickOnTheCheckBoxBlack() {
         driver.findElement(checkBoxBlack).click();
     }
+    //вводим комментарий
     public void inputComment(String comment) {
         driver.findElement(commentField).sendKeys(comment);
     }
+    //жмем кнопку Заказать
     public void clickOnTheOrderButton() {
         driver.findElement(orderButton).click();
     }
+    //жмем ДА в подтверждении заказа
     public void clickYesButton() {
         driver.findElement(buttonYes).click();
     }
+    //проверка принят ли заказ
     public boolean isDisplay() {
         return driver.findElement(locatorForAssert).isDisplayed();
     }
-
-
 }

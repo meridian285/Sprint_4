@@ -16,8 +16,8 @@ public abstract class BaseTest {
     public static void startBeforeEveryTest(){
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
-        //WebDriverManager.firefoxdriver().setup();
-        //driver = new FirefoxDriver();
+//        WebDriverManager.firefoxdriver().setup();
+//        driver = new FirefoxDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
         driver.get("https://qa-scooter.praktikum-services.ru/");
     }

@@ -2,12 +2,14 @@ package ru.yandex.practikum.pageObject;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class OrderPage extends ru.yandex.practikum.pageObject.BasePage {
+public class OrderPage extends BasePage {
+    //переменные для тестовых данных
     private final String name;
     private final String surname;
     private final String address;
     private final String stationMetro;
     private final String phoneNumber;
+    //метод для ввода тестовых данных(надеюсь правильный коммент)
     public OrderPage(WebDriver driver, String name, String surname, String address, String stationMetro, String phoneNumber){
         super(driver);
         this.name = name;
